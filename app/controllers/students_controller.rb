@@ -12,7 +12,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-    redirect_to students_path
+    session[:form_params] = params.inspect
+    redirect_to new_students_path
   end
 
   private
